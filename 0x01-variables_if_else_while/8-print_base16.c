@@ -7,7 +7,7 @@
 int main(void)
 {
 	int a = 0;
-	char b = a;
+	char b = 'a';
 
 	while (a < 10)
 	{
