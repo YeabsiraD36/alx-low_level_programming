@@ -28,7 +28,9 @@ int main(void)
 					putchar(' ');
 				}
 				else
+				{
 					;
+				}
 			}
 			b++;
 		}
