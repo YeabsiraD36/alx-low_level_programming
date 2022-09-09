@@ -7,17 +7,23 @@
 int main(void)
 {
 	int a = 0;
-	int b = 0;
+	int b;
 
 	while (a < 10)
 	{
+		b = 0;
 		++b;
 		while (b < 10)
 		{
 			putchar(a + '0');
 			putchar(b + '0');
+			if (a == 9 && b == 9)
+				;
+			else
+			{
 			putchar(',');
 			putchar(' ');
+			}
 			b++;
 		}
 		a++;
