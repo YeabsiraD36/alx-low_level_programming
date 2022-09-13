@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_alphabet_x10 - entry point
  * description: program that prints alphabet 10 times

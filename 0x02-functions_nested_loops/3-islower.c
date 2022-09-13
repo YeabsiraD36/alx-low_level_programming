@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _islower - is a function that identify lowercase letters
  * @c: is test subject

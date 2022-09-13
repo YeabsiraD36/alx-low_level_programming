@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_alphabet - Entry point
  * Description: a program display alphabet in lower case
@@ -10,8 +10,8 @@ void print_alphabet(void)
 
 	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
 	{
-		putchar(alphabet);
+		_putchar(alphabet);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
