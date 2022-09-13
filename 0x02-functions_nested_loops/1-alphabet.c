@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  * print_alphabet - Entry point
  * Description: a program display alphabet in lower case
