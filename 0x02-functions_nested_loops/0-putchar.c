@@ -14,6 +14,5 @@ int main(void)
 	{
 		_putchar(print[num]);
 	}
-	_putchar('\n);
-	return (0);
+	_putchar('\n');
 }

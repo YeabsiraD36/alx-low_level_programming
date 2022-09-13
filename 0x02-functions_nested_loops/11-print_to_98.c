@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main"
+#include "main.h"
 /**
  * print_to_98 - listes upto 98
  * @n: number entered
