@@ -7,7 +7,6 @@
 int main(void)
 {
 	char print[] = "_putchar";
-	
 	int num;
 
 	for (num = 0 ; num <= 7 ; num++)
