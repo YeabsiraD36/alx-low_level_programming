@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _isupper - function that checks uppercase
  * @c: test subject
@@ -14,5 +15,4 @@ int _isupper(int c);
 	{
 		return (0);
 	}
-	return (0);
 }
