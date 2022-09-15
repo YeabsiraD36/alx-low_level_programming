@@ -7,7 +7,9 @@
 int main(void)
 {
 	long int f;
-	for (f = 2; f < 612852475143; f++)
+	long int x = 612852475143;
+
+	for (f = 2; f < x; f++)
 	{
 		if (x % f == 0)
 		{
