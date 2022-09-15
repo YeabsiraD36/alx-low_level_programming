@@ -5,7 +5,7 @@
  * @c: test subject
  * Return: 1 if its uppercase 0 is its not
  */
-int _isupper(int c);
+int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
