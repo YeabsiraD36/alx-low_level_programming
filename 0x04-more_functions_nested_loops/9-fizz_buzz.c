@@ -15,7 +15,7 @@ int main(void)
 	{
 		if ((a % 3) == 0 && (a % 5) == 0)
 		{
-			printf("Fizz");
+			printf("FizzBuzz");
 		}
 		else if ((a % 5) == 0)
 		{
@@ -23,7 +23,7 @@ int main(void)
 		}
 		else if ((a % 3) == 0)
 		{
-			printf("FizzBuzz");
+			printf("Fizz");
 		}
 		else
 		{
@@ -34,6 +34,6 @@ int main(void)
 			printf(" ");
 		}
 	}
-	printf("\n");
+	printf("i\n");
 	return (0);
 }
