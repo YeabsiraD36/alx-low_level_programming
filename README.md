@@ -1,1 +1,1 @@
-low level language c
+Pointers, Arrays and Strings in C
