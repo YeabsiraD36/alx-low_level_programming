@@ -1,15 +1,14 @@
-#include "main.h"
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 /**
  */
 int main(void)
 {
-int num;
+    unsigned int i;
 
-srand(time(0));
-num = rand();
-printf("%i\n", num);
-return (0);
+    srand(time(0));
+    i = rand();
+    printf("%i\n", i);
+    return (0);
 }
