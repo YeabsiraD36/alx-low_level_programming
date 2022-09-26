@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "main.h"
 /**
  * _memcpy - function that cpy memory area
@@ -17,22 +16,3 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-=======
-#include "main.h"
-
-/**
- * _memcpy - copies memory area
- * @dest: destination string
- * @src: source string
- * @n: number of bytes to be copied
- * Return: pointer to dest
- */
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	char *mem = dest;
-
-	while (n--)
-		*dest++ = *src++;
-	return (mem);
-}
->>>>>>> 0c82ca259bb963b374609aacd488e2d8e462093c
