@@ -1,43 +1,34 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * is_numerical - Check if is a digit
- * @n: Number
- * Return: If is a number, return 1 else return 0
- */
-int is_numerical(unsigned int n)
-{
-	return (n >= '0' && n <= '9');
-}
-
-/**
- * _atoi - Convert a string to a number
- * @s: String
- * Return: Return the num
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
  */
 int _atoi(char *s)
 {
-	unsigned int number, i;
-	int sign;
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	sign = 1;
-	number = 0;
-
-	/*Start FOR*/
-	for (i = 0; s[i] != '\0'; i++)
+	while (*(s + count) != '\0')
 	{
-		if (is_numerical(s[i])) /*Condition*/
-		{
-			number = (s[i] - 48)  + number * 10;
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
+		if (*(s + count) == '-')
+			pn *= -1;
 
-			if (s[i + 1] == ' ')
-				break;
-		}
-		else if (s[i] == '-')
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
 		{
-			sign *= -1;
+			if (size > 0)
+				m *= 10;
+			size++;
 		}
-
+		count++;
 	}
 
-	return (number * sign);
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (oi * pn);
+}
