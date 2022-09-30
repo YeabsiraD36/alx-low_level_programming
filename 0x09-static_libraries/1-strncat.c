@@ -1,49 +1,32 @@
-#include "main.h"
-
-int _strlen(char *s);
-
+#include "holberton.h"
 /**
- * _strncat - Concatenates two strings.
- *
- * @dest: is a pointer to a string.
- *
- * @src: is a pointre to a string.
- *
- * @n: is an int
- *
- * Return: Always 0.
+ *_strncat -  concatenates two strings
+ *@dest: A pointer to an char that will be updated
+ *@src: A pointer to an char that will be updated
+ *@n: value
+ *Return: dest
  */
 
 char *_strncat(char *dest, char *src, int n)
+
 {
-int i = _strlen(dest), j;
+	int i, j;
 
-	for (j = 0; j < n && src[j] != '\0'; j++)
-	{
-		dest[i + j] = src[j];
-	}
-
-	dest[i + j] = '\0';
-
-return (dest);
-}
-
-/**
- *_strlen - Measures the lenght of a string.
- *
- * @s: is a pointer to a char.
- *
- * Return: Always 0.
- */
-
-int _strlen(char *s)
-{
-int i = 0;
-
-	while (*(s + i) != '\0')
+	i = 0;
+	while (dest[i] != '\0') /*WHILE count character */
 	{
 		i++;
 	}
 
-return (i);
+	j = 0;
+	while (j < n && src[j] != '\0') /*WHILE concatenate dest with src*/
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+
+	dest[i] = '\0';
+
+	return (dest);
 }

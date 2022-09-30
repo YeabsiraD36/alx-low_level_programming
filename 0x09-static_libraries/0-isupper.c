@@ -1,19 +1,13 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _isupper - Entry point
- *
- * @c: c is a variable name
- *
- * Return: Always 0 (Success)
+ * _isupper - check for upper case letter
+ * @c : character to check the case
+ * Return:0 or 1
  */
 
 int _isupper(int c)
 {
-if (c >= 97 && c <= 122)
-return (0);
-if (c >= 65 && c <= 90)
-return (1);
+	return (c >= 65 && c <= 90);
 
-return (0);
 }

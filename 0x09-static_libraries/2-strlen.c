@@ -1,18 +1,16 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _strlen - swaps integers with pointers.
- *
- * @s: is pointer to an char.
- * char: is a data type.
- * Return: Always 0.
- */
+ * _strlen - find the length of a string
+ * @s: pointer to the string to check
+ * Return: void
+*/
+
+
 int _strlen(char *s)
 {
-int c = 0;
+int i = 0;
+while (s[i])
+	i++;
 
-while (*(s + c) != '\0')
-c++;
-
-return (c);
+return (i);
 }

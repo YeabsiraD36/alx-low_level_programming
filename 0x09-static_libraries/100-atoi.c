@@ -1,44 +1,43 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
+
 /**
- * _atoi - print the integer of a char.
- * @s:  tested char
- * Return: integer.
+ * is_numerical - Check if is a digit
+ * @n: Number
+ * Return: If is a number, return 1 else return 0
+ */
+int is_numerical(unsigned int n)
+{
+	return (n >= '0' && n <= '9');
+}
+
+/**
+ * _atoi - Convert a string to a number
+ * @s: String
+ * Return: Return the num
  */
 int _atoi(char *s)
 {
-	unsigned int counter, i, j, k, length, num, l;
-	int aux;
+	unsigned int number, i;
+	int sign;
 
-	aux = 1;
-	counter = 0;
-	num = 0;
+	sign = 1;
+	number = 0;
 
-	while (*(s + counter) != '\0')
-		counter++;
-	for (i = 0; i < counter; i++)
+	/*Start FOR*/
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*(s + i) <= '9' && *(s + i) >= '0')
-		break;
-	}
-	for (j = i; j < counter; j++)
-	{
-		if (!(*(s + j) <= '9' && *(s + j) >= '0'))
-			break;
+		if (is_numerical(s[i])) /*Condition*/
+		{
+			number = (s[i] - 48)  + number * 10;
+
+			if (s[i + 1] == ' ')
+				break;
+		}
+		else if (s[i] == '-')
+		{
+			sign *= -1;
+		}
+
 	}
 
-	for (k = 0; k < i; k++)
-	{
-		if (*(s + k) == '-')
-			aux = -aux;
-	}
-	length = j - i;
-	l = i;
-		while (length >= 1)
-	{
-		num = num * 10 + (*(s + l) - '0');
-		l++;
-		length--;
-	}
-	return (num * aux);
-}
+	return (number * sign);

@@ -1,22 +1,22 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _memset - This function fills memory with a constant byte
- *
- * @s: is pointer to a char
- * @b: is a char
- * @n: is an unsigned int
- *
- * Return: Returns the transformed pointer
- *
-**/
+ * *_memset - fills memory with a constant byte.
+ * @s: pointer to put the constant
+ * @b: constant
+ * @n: max bytes to use
+ * Return: s
+ */
+
 
 char *_memset(char *s, char b, unsigned int n)
 {
 unsigned int i;
 
-for (i = 0; i < n; i++)
-s[i] = b;
+for (i = 0; n > 0 ; i++, n--)
+{
+	s[i] = b;
+}
 
 return (s);
 }
