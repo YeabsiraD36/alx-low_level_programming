@@ -24,7 +24,7 @@ void free_listp(listp_t **head)
 /**
  * print_listint_safe - prints linked list
  * @head: head node
- * Returns: number of nodes
+ * Return: number of nodes
  */
 size_t print_listint_safe(const listint_t *head)
 {
